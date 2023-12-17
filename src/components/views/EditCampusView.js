@@ -32,7 +32,8 @@ const EditCampusView = (props) => {
   const classes = useStyles();
   return (
     <div>
-      <h1>Edit Campus: </h1>
+      <h1>Edit Campus </h1>
+
       <div className={classes.root}>
         <div className={classes.formContainer}>
           <div className={classes.formTitle}>

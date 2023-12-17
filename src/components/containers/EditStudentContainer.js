@@ -32,6 +32,21 @@ class EditStudentContainer extends Component {
   handleSubmit = async (event) => {
     event.preventDefault(); // Prevent browser reload/refresh after submit
 
+    const firstName = event.target.firstname.value;
+    const lastName = event.target.lastname.value;
+    const email = event.target.email.value;
+
+    if (
+      firstName.trim() !== firstName ||
+      lastName.trim() !== lastName ||
+      email.trim() !== email
+    ) {
+      alert(
+        "Fill it in so that there are no blank spaces when trimming the names and email.."
+      );
+      return;
+    }
+
     let student = {
       id: this.props.student.id,
       firstname:

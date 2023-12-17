@@ -12,7 +12,6 @@ const StudentView = (props) => {
   return (
     <div>
       <h1>{student.firstname + " " + student.lastname}</h1>
-      <h3>{student.campus.name}</h3>
       {student.imageUrl && (
         <img
           src={student.imageUrl}
@@ -27,8 +26,11 @@ const StudentView = (props) => {
           <h3>{student.campus.name}</h3>
         </Link>
       ) : (
-        <p>Student is not enrolled.</p>
+        <p>Student is not currently enrolled.</p>
       )}
+      <Link to={`/editstudent/${student.id}`}>
+        <button>Edit Student</button>
+      </Link>
       <Link to={`/students`}>
         <button onClick={() => deleteStudent(student.id)}>
           Delete Student

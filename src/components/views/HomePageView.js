@@ -8,7 +8,12 @@ const HomePageView = () => {
   // Render Home page view
   return (
     <div>
-      <h1>Home Page</h1>
+      <h1>Campus Database</h1>
+      <p> Add, Delete, or edit students and campuses!</p>
+      <img
+        src="https://urge.org/wp-content/uploads/2021/09/college-folk.jpg"
+        width="500"
+      ></img>
     </div>
   );
 };
